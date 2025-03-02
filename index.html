@@ -3,26 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Drink Menu</title>
+    <title>Refreshing Drinks Menu</title>
     <style>
-        /* Google Fonts */
-        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Lobster&display=swap');
+        @font-face {
+            font-family: 'Forte';
+            src: url('https://example.com/fonts/Forte.ttf') format('truetype');
+        }
 
         body {
-            font-family: 'Poppins', sans-serif;
+            font-family: 'Forte', 'Brush Script MT', cursive;
             margin: 0;
             padding: 0;
-            background: linear-gradient(135deg, #ff758c, #ff7eb3);
+            background: black;
+            color: white;
             text-align: center;
         }
 
-        /* Flash Screen */
         .flash-screen {
             position: fixed;
             width: 100%;
             height: 100vh;
-            background: rgba(255, 61, 61, 0.95);
-            color: white;
+            background: black;
+            color: gold;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -34,84 +36,90 @@
         }
 
         .flash-screen img {
-            width: 90px;
-            height: 90px;
+            width: 80px;
+            height: 80px;
             margin-bottom: 10px;
             animation: bounce 1.5s infinite;
         }
 
-        /* Menu Styling */
         .menu-container {
             max-width: 600px;
             margin: 50px auto;
-            background: white;
-            padding: 30px;
-            border-radius: 20px;
-            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+            background: rgba(255, 215, 0, 0.1);
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(255, 215, 0, 0.5);
             opacity: 0;
             animation: fadeIn 3s ease-in-out forwards;
             animation-delay: 2.5s;
         }
 
         h1 {
-            font-size: 30px;
-            font-family: 'Lobster', cursive;
-            color: #ff4d6d;
-            margin-bottom: 20px;
+            font-size: 42px;
+            color: gold;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .menu-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
         }
 
         .section {
-            margin-bottom: 25px;
+            background: rgba(255, 215, 0, 0.2);
             padding: 15px;
-            border-radius: 12px;
-            background: rgba(255, 77, 109, 0.1);
-            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
         }
 
         h2 {
-            font-size: 24px;
-            color: #ff1744;
-            border-bottom: 3px solid #ff4d6d;
+            font-size: 26px;
+            color: gold;
+            border-bottom: 2px solid gold;
             display: inline-block;
-            padding-bottom: 6px;
-            margin-bottom: 12px;
+            padding-bottom: 5px;
+            margin-bottom: 10px;
         }
 
         ul {
             list-style: none;
             padding: 0;
+            text-align: left;
         }
 
         li {
-            padding: 10px 0;
-            font-size: 18px;
-            transition: transform 0.3s ease-in-out, background 0.3s;
-            border-radius: 8px;
+            padding: 8px 0;
+            font-size: 20px;
+            transition: transform 0.2s ease-in-out;
         }
 
         li:hover {
-            transform: scale(1.07);
+            transform: scale(1.05);
             font-weight: 600;
-            background: rgba(255, 61, 61, 0.15);
+            color: gold;
         }
 
         .price {
             font-weight: bold;
-            color: #ff1744;
+            color: gold;
         }
 
         .combo-desc {
-            font-size: 14px;
-            color: #666;
+            font-size: 16px;
+            color: #bbb;
         }
 
-        /* Ensure scrolling is enabled */
-        .content {
-            min-height: 100vh;
-            padding-bottom: 50px;
+        .footer {
+            background: gold;
+            color: black;
+            text-align: center;
+            padding: 10px;
+            font-size: 18px;
+            font-weight: bold;
+            margin-top: 20px;
         }
 
-        /* Animations */
         @keyframes fadeOut {
             0% { opacity: 1; }
             100% { opacity: 0; visibility: hidden; }
@@ -130,61 +138,54 @@
 </head>
 <body>
 
-<!-- Flash Screen -->
 <div class="flash-screen">
     <img src="https://cdn-icons-png.flaticon.com/512/921/921347.png" alt="Drink Icon">
-    Welcome to Refreshing Sodas and Mocktails! 🍹
+    Welcome to Refreshing Drinks! 🍸✨
 </div>
 
-<!-- Main Content -->
-<div class="content">
-    <div class="menu-container">
-        <h1>🍹 Refreshing Sodas and Mocktails! 🍹</h1>
-
+<div class="menu-container">
+    <h1>🍹 Refreshing Drinks Menu 🍹</h1>
+    <div class="menu-grid">
         <div class="section">
-            <h2>Mocktails</h2>
+            <h2>Mocktails (₹80 Each)</h2>
             <ul>
                 <li>Mango</li>
                 <li>Orange</li>
                 <li>Green Apple</li>
                 <li>Black Currant</li>
                 <li>Pineapple</li>
-                <li>Mint</li>
                 <li>Blue Curacao</li>
             </ul>
         </div>
 
         <div class="section">
-            <h2>Sodas</h2>
+            <h2>Sodas (₹30 Each)</h2>
             <ul>
                 <li>Lemon (Sweet)</li>
                 <li>American</li>
                 <li>Blueberry</li>
                 <li>Orange</li>
-                <li>Mint</li>
+                
                 <li>Mango</li>
                 <li>Strawberry</li>
             </ul>
         </div>
 
         <div class="section">
-    <h2>Combo Offers</h2>
-    <ul>
-        <li>Only Soda Combo - Unlimited <span class="price">₹149</span> <br>
-            <span class="combo-desc">One person only, min. 5 drinks</span>
-        </li>
-        <li>Soda + Mocktail Combo - <span class="price">₹99</span></li>
-        <li>Only Mocktail Combo (@3) - <span class="price">₹209</span></li>
-        <li>Double Mocktail Treat – 2 Mocktails - <span class="price">₹149</span></li>
-        <li>Family Fun Pack – 2 Mocktails + 2 Sodas - <span class="price">₹199</span></li>
-        <li>Party Special – 3 Mocktails + 2 Sodas - <span class="price">₹279</span></li>
-    </ul>
-</div>
-
-
+            <h2>Combo Offers</h2>
+            <ul>
+                <li>Only Soda Combo - Unlimited <span class="price">₹149</span> <br>
+                    <span class="combo-desc">One person only, min. 5 drinks</span>
+                </li>
+                <li>Soda + Mocktail Combo - <span class="price">₹105</span> (Save ₹5)</li>
+                <li>Only Mocktail Combo (@3) - <span class="price">₹235</span> (Save ₹5)</li>
+                <li>Double Mocktail Treat – 2 Mocktails - <span class="price">₹155</span> (Save ₹5)</li>
+                <li>Family Fun Pack – 2 Mocktails + 2 Sodas - <span class="price">₹215</span> (Save ₹5)</li>
+                <li>Party Special – 3 Mocktails + 2 Sodas - <span class="price">₹285</span> (Save ₹5)</li>
+            </ul>
+        </div>
     </div>
 </div>
-
 
 
 </body>
