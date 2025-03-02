@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drink Menu</title>
+    <style>
+        /* Google Font */
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+            text-align: center;
+            overflow: hidden;
+        }
+
+        /* Flash Screen */
+        .flash-screen {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            background: #ff3d3d;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            font-size: 24px;
+            font-weight: bold;
+            z-index: 100;
+            animation: fadeOut 3s ease-in-out forwards;
+        }
+
+        .flash-screen img {
+            width: 80px;
+            height: 80px;
+            margin-bottom: 10px;
+            animation: bounce 1.5s infinite;
+        }
+
+        /* Menu Styling */
+        .menu-container {
+            max-width: 600px;
+            margin: 50px auto;
+            background: white;
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            opacity: 0;
+            animation: fadeIn 3s ease-in-out forwards;
+            animation-delay: 2.5s;
+        }
+
+        h1 {
+            font-size: 28px;
+            color: #ff6363;
+            margin-bottom: 15px;
+        }
+
+        .section {
+            margin-bottom: 20px;
+            padding: 15px;
+            border-radius: 10px;
+            background: rgba(255, 99, 99, 0.1);
+        }
+
+        h2 {
+            font-size: 22px;
+            color: #ff3d3d;
+            border-bottom: 2px solid #ff6363;
+            display: inline-block;
+            padding-bottom: 5px;
+            margin-bottom: 10px;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        li {
+            padding: 8px 0;
+            font-size: 18px;
+            transition: transform 0.2s ease-in-out;
+        }
+
+        li:hover {
+            transform: scale(1.05);
+            font-weight: 600;
+        }
+
+        .price {
+            font-weight: bold;
+            color: #ff3d3d;
+        }
+
+        .combo-desc {
+            font-size: 14px;
+            color: #555;
+        }
+
+        /* Animations */
+        @keyframes fadeOut {
+            0% { opacity: 1; }
+            100% { opacity: 0; visibility: hidden; }
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+    </style>
+</head>
+<body>
+
+<!-- Flash Screen -->
+<div class="flash-screen">
+    <img src="https://cdn-icons-png.flaticon.com/512/921/921347.png" alt="Drink Icon">
+    Welcome to the Refreshing Drinks Menu! 🍹
+</div>
+
+<!-- Menu -->
+<div class="menu-container">
+    <h1>🍹 Refreshing Drinks Menu 🍹</h1>
+
+    <div class="section">
+        <h2>Mocktails</h2>
+        <ul>
+            <li>Mango</li>
+            <li>Orange</li>
+            <li>Green Apple</li>
+            <li>Black Currant</li>
+            <li>Pineapple</li>
+            <li>Mint</li>
+            <li>Blue Curacao</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>Sodas</h2>
+        <ul>
+            <li>Lemon (Sweet)</li>
+            <li>American</li>
+            <li>Blueberry</li>
+            <li>Orange</li>
+            <li>Mint</li>
+            <li>Mango</li>
+            <li>Strawberry</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>Combo Offers</h2>
+        <ul>
+            <li>Only Soda Combo - Unlimited <span class="price">₹149</span><br>
+                <span class="combo-desc">One person only, min. 5 drinks</span>
+            </li>
+            <li>Soda + Mocktail Combo - <span class="price">₹99</span></li>
+            <li>Only Mocktail Combo (@3) - <span class="price">₹209</span></li>
+        </ul>
+    </div>
+</div>
+
+</body>
+</html>
